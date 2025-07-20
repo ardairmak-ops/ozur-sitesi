@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Seninle Geçen Günlerimiz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Quicksand&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #fff0f5;
+      font-family: 'Quicksand', sans-serif;
+      color: #4e003b;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background: linear-gradient(135deg, #ff9aa2, #ffb7b2);
+      padding: 30px 15px;
+      color: white;
+      font-family: 'Dancing Script', cursive;
+    }
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+    .counter {
+      font-size: 1.8em;
+      margin: 30px 0;
+      font-family: 'Dancing Script', cursive;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding: 20px;
+    }
+    .gallery img {
+      width: 180px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    .message {
+      background: #ffe0ec;
+      padding: 25px;
+      margin: 30px auto;
+      border-radius: 15px;
+      max-width: 700px;
+      font-size: 1.2em;
+      font-style: italic;
+    }
+    .music-section {
+      background: #fbe4ec;
+      padding: 25px;
+      border-top: 2px dashed #ff9aa2;
+      border-bottom: 2px dashed #ff9aa2;
+    }
+    .music-section h2 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2em;
+      margin-bottom: 15px;
+    }
+    footer {
+      margin: 30px 0;
+      color: #888;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Seninle Geçen Günlerimiz 💖</h1>
+    <p>Tanıştığımız Gün: 02.08.2024</p>
+  </header>
+
+  <div class="counter">
+    <p>Birlikte Geçen Gün Sayısı: <span id="dayCount"></span></p>
+  </div>
+
+  <div class="gallery">
+    <img src="3629D16F-3AD1-4855-A5A0-861D601654AE.jpeg" alt="Biz"><img src="4099E983-6D62-41E8-A0E0-B8E8A82A68DC.jpeg" alt="Biz"><img src="463506A4-532F-48E7-8EAF-CA5442AD9754.jpeg" alt="Biz"><img src="4D7EA482-C1EF-4616-915B-75BDB499C2CF.jpeg" alt="Biz"><img src="4F8E6C0C-63AA-4BCB-B0CA-B69CCDD6606D.jpeg" alt="Biz"><img src="89957E92-B549-4943-8135-08EFD10070D9.jpeg" alt="Biz"><img src="CD6B38C4-14B3-44F3-9F36-197899F3EC82.jpeg" alt="Biz"><img src="F1FEE031-743B-4D9C-945C-FC22156E31F9.jpeg" alt="Biz">
+  </div>
+
+  <div class="message">
+    <p>Irmak, seni ilk gördüğüm günden beri kalbimde özel bir yerin var. Bazen yanlışlar yapıyorum, bazen seni kırıyor olabilirim ama bilmeni isterim ki tüm kalbimle seni seviyorum. Affet beni... Çünkü her sabah seninle uyanmak, her gece sana sarılarak uyumak hayalim. ❤️</p>
+  </div>
+
+  <div class="music-section">
+    <h2>Bizim Şarkımız 🎶</h2>
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/60Oauf6Qe22LRkUKfTOnFC" width="300" height="80" frameBorder="0" allowfullscreen=""
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  </div>
+
+  <footer>
+    <p>Seninle her şeyin anlamı başka... 🌸</p>
+  </footer>
+
+  <script>
+    const startDate = new Date(2024, 7, 2);
+    const today = new Date();
+    const diffTime = Math.abs(today - startDate);
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+    document.getElementById("dayCount").textContent = diffDays + " gün";
+  </script>
+
+</body>
+</html>
