@@ -126,5 +126,47 @@
 <div class="gallery">
     <img src="photo_3.jpg" alt="Ormanda" style="max-width:100%; height:auto; border-radius: 10px;">
 </div>
+  <section style="text-align:center; margin-top:40px;">
+  <h2>💖 Irmak'a Sonsuz Kalpler Yolla 💖</h2>
+  <button onclick="showHearts()" style="
+    font-size: 20px;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ff69b4;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  ">Beni Seviyorsan Tıkla</button>
+</section>
+
+<script>
+function showHearts() {
+  for (let i = 0; i < 30; i++) {
+    let heart = document.createElement('div');
+    heart.innerText = '💖';
+    heart.style.position = 'fixed';
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.top = Math.random() * 100 + 'vh';
+    heart.style.fontSize = (Math.random() * 30 + 20) + 'px';
+    heart.style.animation = 'float 2s ease-out forwards';
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 2000);
+  }
+}
+</script>
+
+<style>
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) scale(1.5);
+    opacity: 0;
+  }
+}
+</style>
 </body>
 </html>
